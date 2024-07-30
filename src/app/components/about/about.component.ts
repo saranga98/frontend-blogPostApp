@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AboutComponent {
   images: string[] = [
     '../../../assets/images/authorImage.jpg',
-    '../../../assets/images/webPoster.jpg',
-    '../../../assets/images/blogpostPoster.jpg'
+    '../../../assets/images/desktopWall.png',
+    '../../../assets/images/bookandpen.jpg'
   ];
 }

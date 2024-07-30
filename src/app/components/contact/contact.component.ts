@@ -26,6 +26,7 @@ export class ContactComponent implements OnInit {
       this.http.post('https://backendblogpostsite20240730155359.azurewebsites.net/api/contact', this.contactForm.value).subscribe(
         response => {
           console.log('Message sent successfully!', response);
+          this.contactForm.reset();
         },
         error => {
           console.error('Error sending message', error);
