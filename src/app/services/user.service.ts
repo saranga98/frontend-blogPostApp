@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UserService {
-  private apiUrl = 'https://backendblogpostsite20240730155359.azurewebsites.net/api/User';
+  private apiUrl = 'http://backendblogpostsite20240730155359.azurewebsites.net/api/User';
 
   constructor(private http: HttpClient) { }
 
