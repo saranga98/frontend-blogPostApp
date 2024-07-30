@@ -11,4 +11,5 @@ export class AboutComponent {
     '../../../assets/images/desktopWall.png',
     '../../../assets/images/bookandpen.jpg'
   ];
+
 }
