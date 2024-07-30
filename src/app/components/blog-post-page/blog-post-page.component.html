@@ -5,7 +5,8 @@
     <div class="p-col-12 p-md-8">
         <div class="blog-post">
             <h1>{{ post?.title }}</h1>
-            <img [src]="'https://localhost:7185' + post?.imagePath" alt="Post Image" width="100">
+            <img [src]="'https://backendblogpostsite20240730155359.azurewebsites.net' + post?.imagePath"
+                alt="Post Image" width="100">
             <div class="auth-date-container">
                 <p>By: {{ post?.author }}</p>
                 <p>{{ post?.createdDate | date }}</p>

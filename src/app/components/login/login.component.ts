@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
         password: formValue.password
       };
 
-      this.http.post('https://localhost:7185/api/User/login', loginData).subscribe(
+      this.http.post('https://backendblogpostsite20240730155359.azurewebsites.net/api/User/login', loginData).subscribe(
         (response: any) => {
           // Handle successful login, navigate based on userType
           if (response.userType === 'admin') {

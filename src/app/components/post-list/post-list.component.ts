@@ -26,7 +26,7 @@ import { PostService } from 'src/app/services/post.service';
 // }
 export class PostListComponent implements OnInit {
   posts: any[] = [];
-  apiUrl = "https://localhost:7185/api/posts";
+  apiUrl = "https://backendblogpostsite20240730155359.azurewebsites.net/api/posts";
 
   constructor(private postService: PostService, private router: Router) { }
 

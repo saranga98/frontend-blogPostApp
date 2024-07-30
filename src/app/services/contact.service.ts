@@ -7,7 +7,7 @@ import { Contact } from '../models/Contact.model';
   providedIn: 'root'
 })
 export class ContactService {
-  private apiUrl = 'https://localhost:7185/api/Contact';
+  private apiUrl = 'https://backendblogpostsite20240730155359.azurewebsites.net/api/Contact';
 
   constructor(private http: HttpClient) { }
 

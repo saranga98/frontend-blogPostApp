@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class UploadService {
 
-  private apiUrl = `https://localhost:7185/api/posts`;
+  private apiUrl = `https://backendblogpostsite20240730155359.azurewebsites.net/api/posts`;
 
   constructor(private http: HttpClient) { }
   uploadPost(postData: any, file: File): Observable<any> {

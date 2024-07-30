@@ -8,7 +8,7 @@ import { Comment } from '../models/comment.model';
 })
 export class CommentService {
 
-  private baseUrl = 'https://localhost:7185/api/Comments';
+  private baseUrl = 'https://backendblogpostsite20240730155359.azurewebsites.net/api/Comments';
 
   constructor(private http: HttpClient) { }
 

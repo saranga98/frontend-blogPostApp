@@ -35,7 +35,7 @@ export class EditPostComponent implements OnInit {
         author: post.author,
         description: post.description
       });
-      this.currentImagePath = post.imagePath ? `https://localhost:7185${post.imagePath}` : null;
+      this.currentImagePath = post.imagePath ? `https://backendblogpostsite20240730155359.azurewebsites.net${post.imagePath}` : null;
     });
   }
 

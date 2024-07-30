@@ -13,7 +13,8 @@
     <div *ngFor="let post of posts" class="p-col-12 p-md-6 p-lg-3 p-mb-3 post-card-wrapper">
         <p-card (click)="viewPost(post.id)" class="post-card">
             <ng-template pTemplate="header">
-                <img [src]="'https://localhost:7185' + post.imagePath" alt="Post Image" class="post-image">
+                <img [src]="'https://backendblogpostsite20240730155359.azurewebsites.net' + post.imagePath"
+                    alt="Post Image" class="post-image">
             </ng-template>
             <ng-template pTemplate="title">
                 <h2 class="post-title">{{ truncateTitle(post.title) }}</h2>

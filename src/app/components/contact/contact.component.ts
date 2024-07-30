@@ -23,7 +23,7 @@ export class ContactComponent implements OnInit {
 
   onSubmit(): void {
     if (this.contactForm.valid) {
-      this.http.post('https://localhost:7185/api/contact', this.contactForm.value).subscribe(
+      this.http.post('https://backendblogpostsite20240730155359.azurewebsites.net/api/contact', this.contactForm.value).subscribe(
         response => {
           console.log('Message sent successfully!', response);
         },

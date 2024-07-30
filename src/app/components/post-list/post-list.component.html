@@ -20,8 +20,8 @@
             <td>{{ post.title | slice:0:50 }}</td>
             <td>{{ post.author }}</td>
             <td>
-                <img [src]="'https://localhost:7185' + post.imagePath" alt="Post Image" class="post-image"
-                    style="width: 100px;">
+                <img [src]="'https://backendblogpostsite20240730155359.azurewebsites.net' + post.imagePath"
+                    alt="Post Image" class="post-image" style="width: 100px;">
             </td>
             <td>{{ post.description | slice:0:100 }}...</td>
             <td>{{ post.createdDate | date }}</td>

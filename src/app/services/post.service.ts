@@ -8,7 +8,7 @@ import { Post } from '../models/post.model';
 })
 export class PostService {
 
-  private apiUrl = `https://localhost:7185/api/Posts`;
+  private apiUrl = `https://backendblogpostsite20240730155359.azurewebsites.net/api/Posts`;
 
   constructor(private http: HttpClient) { }
 
