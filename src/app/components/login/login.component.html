@@ -1,0 +1,29 @@
+<p-card>
+    <p-header>
+        <h1 class="text-center">Welcome Back</h1>
+    </p-header>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="p-fluid">
+            <div class="p-field">
+                <label for="email">Email</label>
+                <input id="email" type="text" pInputText formControlName="email" />
+                <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched" class="p-error">
+                    Please enter a valid email.
+                </div>
+            </div>
+            <div class="p-field">
+                <label for="password">Password</label>
+                <input id="password" type="password" pInputText formControlName="password" />
+                <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched" class="p-error">
+                    Password is required.
+                </div>
+            </div>
+            <div class="p-field">
+                <button type="submit" pButton label="Login" style="margin-top: 12%;"></button>
+            </div>
+        </div>
+    </form>
+    <p-footer class="text-center p-mt-4">
+        <a routerLink="/register">Don't have an account? Register here</a>
+    </p-footer>
+</p-card>

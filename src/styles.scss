@@ -1,0 +1,9 @@
+@import "primeicons/primeicons.css";
+@import 'primeflex/primeflex.scss';
+
+/* You can add global styles to this file, and also import other style files */
+textarea {
+    width: 100%;
+    min-height: 100px;
+    max-height: 300px;
+}

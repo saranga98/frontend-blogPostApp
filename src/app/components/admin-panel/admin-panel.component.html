@@ -1,0 +1,38 @@
+<div class="banner-container">
+    <h1 class="banner-text">Welcome Admin</h1>
+</div>
+
+<div class="button-container p-d-flex p-jc-center p-mb-4">
+    <button pButton class="p-button p-button-primary p-m-2" label="Create New Post"
+        (click)="navigateTo('create')"></button>
+    <button pButton class="p-button  p-button-primary p-m-2" label="View Published Posts"
+        (click)="navigateTo('posts')"></button>
+</div>
+
+<div class="p-grid p-justify-center">
+    <div class="p-col-12 p-md-10">
+
+        <p-header>
+            <h1 class="text-left p-m-4">Messages</h1>
+        </p-header>
+        <hr>
+        <p-table [value]="contacts" responsiveLayout="scroll">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Subject</th>
+                    <th>Message</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-contact>
+                <tr>
+                    <td>{{ contact.name }}</td>
+                    <td>{{ contact.email }}</td>
+                    <td>{{ contact.subject }}</td>
+                    <td>{{ contact.message }}</td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>
+</div>

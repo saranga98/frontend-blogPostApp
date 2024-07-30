@@ -1,0 +1,33 @@
+<p-header>
+    <h1 class="text-center"> <a pButton pRipple icon="pi pi-chevron-left" routerLink="/admin-panel"
+            class="p-button-rounded p-button-secondary" style="text-decoration: none;"></a>&nbsp;Create new Blog Post
+    </h1>
+</p-header>
+<form [formGroup]="postForm" (ngSubmit)="onSubmit()">
+    <p-card class="form-card">
+
+        <div class="p-grid p-align-center p-justify-center p-mb-4">
+            <div class="p-col-12 p-md-10 p-lg-8">
+                <div class="p-field">
+                    <label for="title">Title</label>
+                    <input id="title" type="text" pInputText formControlName="title" />
+                </div>
+                <div class="p-field">
+                    <label for="author">Author</label>
+                    <input id="author" type="text" pInputText formControlName="author" />
+                </div>
+                <div class="p-field">
+                    <label for="description">Description</label>
+                    <textarea id="description" pInputTextarea formControlName="description" rows="5"></textarea>
+                </div>
+                <div class="p-field">
+                    <label for="file">Image</label>
+                    <input id="file" type="file" (change)="onFileSelected($event)" />
+                </div>
+            </div>
+        </div>
+        <p-footer class="form-footer">
+            <button type="submit" pButton label="Save" [disabled]="postForm.invalid" style="width: 100%;"></button>
+        </p-footer>
+    </p-card>
+</form>

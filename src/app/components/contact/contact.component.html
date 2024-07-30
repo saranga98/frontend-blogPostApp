@@ -1,0 +1,51 @@
+<div class="card">
+    <app-navbar></app-navbar>
+</div>
+
+<div class="contact-container p-grid p-align-center p-justify-center">
+    <div class="p-col-12 p-md-8 p-lg-6 contact-content">
+        <p-card>
+            <ng-template pTemplate="title">
+                <h2>Contact Us</h2>
+            </ng-template>
+            <ng-template pTemplate="content">
+                <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                    <div class="p-field">
+                        <label for="name">Name</label>
+                        <input id="name" type="text" pInputText formControlName="name" />
+                        <div *ngIf="contactForm.get('name')!.invalid && contactForm.get('name')!.touched"
+                            class="p-error">
+                            Name is required.
+                        </div>
+                    </div>
+                    <div class="p-field">
+                        <label for="email">Email</label>
+                        <input id="email" type="email" pInputText formControlName="email" />
+                        <div *ngIf="contactForm.get('email')!.invalid && contactForm.get('email')!.touched"
+                            class="p-error">
+                            Please enter a valid email.
+                        </div>
+                    </div>
+                    <div class="p-field">
+                        <label for="subject">Subject</label>
+                        <input id="subject" type="text" pInputText formControlName="subject" />
+                        <div *ngIf="contactForm.get('subject')!.invalid && contactForm.get('subject')!.touched"
+                            class="p-error">
+                            Subject is required.
+                        </div>
+                    </div>
+                    <div class="p-field">
+                        <label for="message">Message</label>
+                        <textarea id="message" pInputTextarea formControlName="message"></textarea>
+                        <div *ngIf="contactForm.get('message')!.invalid && contactForm.get('message')!.touched"
+                            class="p-error">
+                            Message is required.
+                        </div>
+                    </div>
+                    <button pButton type="submit" label="Send" [disabled]="contactForm.invalid"
+                        style="width: 100%;"></button>
+                </form>
+            </ng-template>
+        </p-card>
+    </div>
+</div>

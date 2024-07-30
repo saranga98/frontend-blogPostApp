@@ -1,0 +1,30 @@
+<div class="card">
+    <app-navbar></app-navbar>
+</div>
+<div class="p-grid p-justify-center">
+    <div class="p-col-12 p-md-8">
+        <div class="blog-post">
+            <h1>{{ post?.title }}</h1>
+            <img [src]="'https://localhost:7185' + post?.imagePath" alt="Post Image" width="100">
+            <div class="auth-date-container">
+                <p>By: {{ post?.author }}</p>
+                <p>{{ post?.createdDate | date }}</p>
+            </div>
+            <p>{{ post?.description }}</p>
+        </div>
+    </div>
+    <div class="p-col-12 p-md-4">
+        <div class="comments-section">
+            <h2>Leave a Comments</h2>
+            <div class="comment-form">
+                <input type="text" pInputText placeholder="Name" [(ngModel)]="newComment.name">
+                <textarea pInputTextarea placeholder="Comment" [(ngModel)]="newComment.content"></textarea>
+                <button pButton type="button" label="Send" icon="pi pi-send" (click)="addComment()"></button>
+            </div>
+            <div *ngFor="let comment of comments" class="comment">
+                <p><strong>{{ comment.name }}</strong> - {{ comment.createdDate | date }}</p>
+                <p>{{ comment.content }}</p>
+            </div>
+        </div>
+    </div>
+</div>

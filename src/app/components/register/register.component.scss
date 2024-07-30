@@ -1,0 +1,114 @@
+// .register-container {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     height: 100vh;
+//     background-color: #f5f5f5;
+
+//     p-card {
+//         width: 100%;
+//         max-width: 500px;
+//         padding: 2rem;
+
+//         h2 {
+//             margin-bottom: 1.5rem;
+//             color: #333;
+//         }
+
+//         .p-field {
+//             margin-bottom: 1rem;
+//         }
+
+//         .p-error {
+//             font-size: 0.875rem;
+//             color: #e74c3c;
+//         }
+
+//         .p-mt-2 {
+//             margin-top: 1rem;
+//         }
+
+//         .text-center {
+//             text-align: center;
+//         }
+
+//         .p-link {
+//             color: #007bff;
+//             text-decoration: none;
+
+//             &:hover {
+//                 text-decoration: underline;
+//             }
+//         }
+//     }
+// }
+
+::ng-deep {
+    .p-card {
+        max-width: 50%;
+        margin: 2rem auto;
+        padding: 2rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 90vh;
+
+        .text-center {
+            text-align: center;
+        }
+
+        .p-header {
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .p-footer {
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .p-field {
+            margin-bottom: 1rem;
+
+            label {
+                display: block;
+                margin-bottom: 0.5rem;
+                font-weight: bold;
+            }
+
+            .p-error {
+                color: red;
+                font-size: 0.85rem;
+            }
+
+            .p-password {
+                width: 100%;
+            }
+        }
+
+        .p-field-checkbox {
+            display: flex;
+            align-items: center;
+
+            label {
+                margin-left: 0.5rem;
+                font-weight: normal;
+            }
+        }
+
+        button[pButton] {
+            width: 100%;
+            padding: 0.75rem;
+            font-size: 1rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .p-card {
+            max-width: 100%;
+        }
+    }
+}

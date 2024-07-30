@@ -1,0 +1,39 @@
+<div class="card">
+    <app-navbar></app-navbar>
+</div>
+
+<div class="about-container p-grid p-align-center p-justify-center">
+    <!-- <div class="p-col-12 p-md-8 p-lg-6 about-content"> -->
+    <p-card>
+        <ng-template pTemplate="header">
+            <p-carousel [value]="images" [numVisible]="1" [numScroll]="1" [autoplayInterval]="3000"
+                class="custom-carousel">
+                <ng-template let-image pTemplate="item">
+                    <img [src]="image" alt="Author Image" class="author-carousel-image">
+                </ng-template>
+            </p-carousel>
+        </ng-template>
+        <ng-template pTemplate="title">
+            <h2>About the Author</h2>
+        </ng-template>
+        <ng-template pTemplate="content">
+            <p>
+                Welcome to our blog! Here, we strive to bring you the latest insights, trends, and stories that
+                inspire and inform. Our author, John Doe, is a seasoned writer with over 10 years of experience in
+                the industry. With a passion for sharing knowledge and a knack for storytelling, John ensures that
+                each post is both engaging and informative.
+            </p>
+            <p>
+                John's journey began with a love for writing that quickly evolved into a professional career. He has
+                written for various reputable publications and has built a reputation for delivering high-quality
+                content that resonates with readers. When he's not writing, John enjoys traveling, reading, and
+                exploring new cultures.
+            </p>
+            <p>
+                Thank you for visiting our blog. We hope you find the content valuable and enjoyable. Feel free to
+                reach out with any questions or feedback!
+            </p>
+        </ng-template>
+    </p-card>
+    <!-- </div> -->
+</div>

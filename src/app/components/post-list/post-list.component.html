@@ -1,0 +1,36 @@
+<p-header>
+    <h1 class="text-center"><a pButton pRipple icon="pi pi-chevron-left" routerLink="/admin-panel"
+            class="p-button-rounded p-button-secondary" style="text-decoration: none;"></a>&nbsp;Uploaded
+        Blogs</h1>
+</p-header>
+
+<p-table [value]="posts" responsiveLayout="scroll" class="custom-table">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Image</th>
+            <th>Description</th>
+            <th>Created Date</th>
+            <th>Actions</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-post>
+        <tr>
+            <td>{{ post.title | slice:0:50 }}</td>
+            <td>{{ post.author }}</td>
+            <td>
+                <img [src]="'https://localhost:7185' + post.imagePath" alt="Post Image" class="post-image"
+                    style="width: 100px;">
+            </td>
+            <td>{{ post.description | slice:0:100 }}...</td>
+            <td>{{ post.createdDate | date }}</td>
+            <td style="display: flex; flex-direction: row;">
+                <button style="margin-left: 10%;" pButton type="button" icon="pi pi-pencil"
+                    class="p-button-warning p-m-1" (click)="editPost(post)"></button>
+                <button style="margin-left: 10%;" pButton type="button" icon="pi pi-trash" class="p-button-danger p-m-1"
+                    (click)="deletePost(post.id)"></button>
+            </td>
+        </tr>
+    </ng-template>
+</p-table>

@@ -1,0 +1,61 @@
+.blog-post {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: radial-gradient(#0000001f, #9adddd05);
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        margin-top: 0;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .auth-date-container {
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: 768px) {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+
+//Comment section styles
+.comments-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: radial-gradient(rgb(255 255 255 / 12%), rgb(0 108 255 / 6%));
+
+    .comment-form {
+        margin-bottom: 2rem;
+
+        input,
+        textarea {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+    }
+
+    .comment {
+        margin-bottom: 1.5rem;
+        padding: 1rem;
+        background: #f9f9f9;
+        border-radius: 5px;
+
+        p {
+            margin: 0.5rem 0;
+        }
+    }
+}

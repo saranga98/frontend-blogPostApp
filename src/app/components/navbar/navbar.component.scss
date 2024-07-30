@@ -1,0 +1,17 @@
+::ng-deep .p-menubar {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    border-radius: 0px !important;
+}
+
+.p-menubar .p-menuitem {
+    margin: 0 15px;
+}
+
+.p-menubar .p-menuitem a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
