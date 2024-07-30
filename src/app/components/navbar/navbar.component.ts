@@ -29,6 +29,11 @@ export class NavbarComponent implements OnInit {
         label: 'Contact',
         icon: 'pi pi-envelope',
         command: () => this.router.navigate(['/contact'])
+      },
+      {
+        label: '',
+        icon: 'pi pi-sign-out',
+        command: () => this.router.navigate(['/login'])
       }
     ];
 
