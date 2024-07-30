@@ -27,7 +27,7 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'blog-post/:id', component: BlogPostPageComponent },
   { path: 'admin-panel', component: AdminPanelComponent },
-  { path: '', redirectTo: '/register', pathMatch: 'full' },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
 ];
 
 @NgModule({
