@@ -27,6 +27,7 @@ export class ContactComponent implements OnInit {
         response => {
           console.log('Message sent successfully!', response);
           this.contactForm.reset();
+
         },
         error => {
           console.error('Error sending message', error);
