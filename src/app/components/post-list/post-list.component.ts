@@ -9,21 +9,6 @@ import { PostService } from 'src/app/services/post.service';
   styleUrls: ['./post-list.component.scss']
 })
 
-// export class PostListComponent implements OnInit {
-//   posts: any[] = [];
-
-//   constructor(private postService: PostService) { }
-
-//   ngOnInit(): void {
-//     this.loadPosts();
-//   }
-
-//   loadPosts(): void {
-//     this.postService.getPosts().subscribe(posts => {
-//       this.posts = posts;
-//     });
-//   }
-// }
 export class PostListComponent implements OnInit {
   posts: any[] = [];
   apiUrl = "https://backendblogpostsite20240730155359.azurewebsites.net/api/posts";
